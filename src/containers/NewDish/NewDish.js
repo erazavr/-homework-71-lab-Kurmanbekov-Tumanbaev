@@ -22,35 +22,41 @@ class NewDish extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.newDishHandler}>
-                    <div>
-                        <label htmlFor="name">Pizza Name</label>
+                <form onSubmit={this.newDishHandler} className='form'>
+                    <div className='form-inner'>
+                        <label htmlFor="name" className='label'>Pizza Name</label>
                         <input
+                            className='field'
                             type="text"
                             id='name'
                             name='dishName'
                             onChange={this.valueChanged}
+                            placeholder='Pizza name'
                         />
                     </div>
-                    <div>
-                        <label htmlFor="cost">Pizza cost</label>
+                    <div className='form-inner'>
+                        <label htmlFor="cost" className='label'>Pizza cost</label>
                         <input
+                            className='field'
                             type="number"
                             id='cost'
                             name='cost'
                             onChange={this.valueChanged}
+                            placeholder='Pizza cost'
                         />
                     </div>
-                    <div>
-                        <label htmlFor="link">Paste image link</label>
+                    <div className='form-inner'>
+                        <label htmlFor="link" className='label'>Paste image link</label>
                         <input
+                            className='field'
                             type="text"
                             id='link'
                             name='imgUrl'
                             onChange={this.valueChanged}
+                            placeholder='Pizza image'
                         />
                     </div>
-                    <button type='submit'>Save</button>
+                    <button type='submit' className='form-btn'>Save</button>
                 </form>
             </div>
         );
