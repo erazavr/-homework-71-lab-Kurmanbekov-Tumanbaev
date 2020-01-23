@@ -11,8 +11,8 @@ const Dishes = props => {
                 </div>
                 <p>{props.dishName}</p>
                 <p><b>{props.cost}KGS</b></p>
-                <NavLink to='/' className='link'>Edit</NavLink>
-                <NavLink to='/' className='link'>Delete</NavLink>
+                <NavLink to={props.to} className='link'>Edit</NavLink>
+                <button className='link' onClick={props.remove}>Delete</button>
             </div>
         </div>
     );
