@@ -16,3 +16,36 @@ export const getDishes = () => {
         }
     }
 };
+export const deleteDish = (id) => {
+    return  async dispatch => {
+        try {
+            dispatch(dishesRequest());
+            await axiosDishes.delete(`/dishes/${id}.json`);
+            dispatch(getDishes())
+        }catch (e) {
+            dispatch(dishesFailure(e))
+        }
+    }
+};
+export const newDish = dish => {
+    return async dispatch => {
+        try {
+            dispatch(dishesRequest());
+            await axiosDishes.post('/dishes.json', dish);
+            dispatch(dishesSuccess())
+        }catch (e) {
+            dispatch(dishesFailure(e))
+        }
+    }
+};
+export const editDish = (id,dish) => {
+    return async dispatch => {
+        try {
+            dispatch(dishesRequest());
+            await axiosDishes.put(`/dishes/${id}.json`, dish);
+            dispatch(getDishes())
+        }catch (e) {
+            dispatch(dishesFailure(e))
+        }
+    }
+}
