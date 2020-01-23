@@ -1,0 +1,36 @@
+.form {
+    text-align: center;
+    background-color: #703b09;
+    border: 3px solid black;
+    padding: 20px 0;
+}
+.form-inner {
+    margin-bottom: 20px;
+}
+.field {
+    padding: 3px 5px;
+    width: 30%;
+    border: 2px solid black;
+    outline: none;
+    height: 20px;
+    border-radius: 5px;
+}
+.label {
+    color: white;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+.label::after {
+    content: ':';
+}
+.form-btn {
+    background-color: white;
+    color: black;
+    outline: none;
+    border: 2px solid black;
+    cursor: pointer;
+    padding: 5px 40px;
+    border-radius: 5px;
+    font-weight: bold;
+}
