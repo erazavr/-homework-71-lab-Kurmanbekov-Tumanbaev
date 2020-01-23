@@ -1,0 +1,51 @@
+.Dishes {
+    background-color: #703b09;
+    padding: 20px 0;
+    border: 3px solid black;
+    color: white;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Dishes-Title {
+    margin-bottom: 20px;
+}
+.Dishes-Title h3 {
+    margin: 0 34% 0 0;
+
+}
+.Dishes-Title button {
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.Dishes-Info img{
+    width: 150px;
+    border: 2px solid white;
+}
+.Dishes-Info p {
+    margin: 0 25px;
+}
+.link {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+}
+.link:hover {
+    text-decoration: underline;
+}
+.link:last-child {
+    margin-right: 0;
+}
+.Dish {
+    border-bottom: 2px solid white;
+    padding: 20px 0;
+}
+.Dish:last-child {
+    border-bottom: none;
+}
