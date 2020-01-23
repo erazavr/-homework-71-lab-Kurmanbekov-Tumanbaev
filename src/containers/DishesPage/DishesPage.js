@@ -8,6 +8,12 @@ class DishesPage extends Component {
     componentDidMount() {
         this.props.getDishes()
     }
+    deleteDish = id => {
+        let isSure = window.confirm('Are you sure?');
+        if (isSure) {
+            this.props.deleteDish(id)
+        }
+    };
     render() {
         return (
             <Fragment>
@@ -15,21 +21,24 @@ class DishesPage extends Component {
                     <h3>Dishes</h3>
                     <NavLink to='/newDish'>Add new Dish</NavLink>
                 </div>
-                <div className='Dishes'>
-                {this.props.dishes &&
-                    Object.keys(this.props.dishes).map(dish => (
-                        <Dishes
-                            key={dish}
-                            dishName={this.props.dishes[dish].dishName}
-                            img={this.props.dishes[dish].img}
-                            cost={this.props.dishes[dish].cost}
-                            remove={()=>this.props.deleteDish(dish)}
-                            to={`/editDish/${dish}`}
-                        />
-                    ))
-
+                {this.props.dishes ?
+                    <div className='Dishes'>
+                        {
+                            Object.keys(this.props.dishes).map(dish => (
+                                <Dishes
+                                    key={dish}
+                                    dishName={this.props.dishes[dish].dishName}
+                                    dishes={this.props.dishes[dish].img}
+                                    img={this.props.dishes[dish].img}
+                                    cost={this.props.dishes[dish].cost}
+                                    remove={() => this.deleteDish(dish)}
+                                    to={`/editDish/${dish}`}
+                                />
+                            ))
+                        }
+                    </div>: <h1 style={{textAlign: 'center'}}>No dishes</h1>
                 }
-                </div>
+
 
             </Fragment>
         );
