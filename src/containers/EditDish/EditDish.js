@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {editDish, getDishes} from "../../store/actions/dishesActions";
-
+import '../NewDish/NewDish.css'
 class EditDish extends Component {
     state = {
         dishName: '',
@@ -33,38 +33,39 @@ class EditDish extends Component {
     render() {
         return (
             <div>
-
-                <form action="" onSubmit={this.editDish}>
-                    <div>
-                        <label htmlFor="">Edit dish name</label>
+                <form action="" onSubmit={this.editDish} className='form'>
+                    <div className='form-inner'>
+                        <label htmlFor="" className='label'>Edit dish name</label>
                         <input
+                            className='field'
                             type="text"
                             name='dishName'
                             value={this.state.dishName}
                             onChange={this.valueChanged}
                         />
                     </div>
-                    <div>
-                        <label htmlFor="">Edit cost</label>
+                    <div className='form-inner'>
+                        <label htmlFor="" className='label'>Edit cost</label>
                         <input
+                            className='field'
                             type="number"
                             name='cost'
                             value={this.state.cost}
                             onChange={this.valueChanged}
                         />
                     </div>
-                    <div>
-                        <label htmlFor="">Edit img url</label>
+                    <div className='form-inner'>
+                        <label htmlFor="" className='label'>Edit img url</label>
                         <input
+                            className='field'
                             type="text"
                             name='imgUrl'
                             value={this.state.imgUrl}
                             onChange={this.valueChanged}
                         />
                     </div>
-                    <button type='submit'>Edit</button>
+                    <button type='submit' className='form-btn'>Edit</button>
                 </form>
-
             </div>
         );
     }
