@@ -74,7 +74,7 @@ class NewDish extends Component {
 const mapStateToProps = state => ({
     loading: state.dishes.loading,
     error: state.dishes.error
-})
+});
 const mapDispatchToProps = dispatch => ({
     newDish: dish => dispatch(newDish(dish))
 });
