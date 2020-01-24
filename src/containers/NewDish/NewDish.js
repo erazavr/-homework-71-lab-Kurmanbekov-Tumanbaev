@@ -10,15 +10,6 @@ class NewDish extends Component {
         cost: '',
     };
     newDishHandler = async (e) => {
-        if (this.state.dishName === '') {
-            alert('You did not enter a name')
-        }
-        if (this.state.cost === '') {
-            alert('You did not enter a cost')
-        }
-        if (this.state.imgUrl === '') {
-            alert('You did not enter a image url')
-        } else {
             e.preventDefault();
             const newDish = {
                 dishName: this.state.dishName,
@@ -27,7 +18,6 @@ class NewDish extends Component {
             };
             await this.props.newDish(newDish);
             this.props.history.push('/')
-        }
 
     };
     valueChanged = event => this.setState({[event.target.name]: event.target.value});
