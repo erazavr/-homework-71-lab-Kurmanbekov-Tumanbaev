@@ -10,10 +10,9 @@ class EditDish extends Component {
         cost: ''
     };
 
-    async componentDidMount() {
+     componentDidMount() {
         const id = this.props.match.params.id;
-        await this.props.getDishes();
-        await this.props.dishes[id] && this.setState({
+         this.props.dishes[id] && this.setState({
             dishName: this.props.dishes[id].dishName,
             imgUrl: this.props.dishes[id].img,
             cost: this.props.dishes[id].cost
