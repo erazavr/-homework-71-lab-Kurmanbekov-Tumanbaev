@@ -7,10 +7,12 @@ import thunk from "redux-thunk";
 import App from './App';
 import './index.css';
 import dishesReducer from "./store/reducers/dishesReducer";
+import ordersReducer from "./store/reducers/ordersReducer";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const rootReducer = combineReducers({
-    dishes: dishesReducer
+    dishes: dishesReducer,
+    orders: ordersReducer,
 });
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
 
