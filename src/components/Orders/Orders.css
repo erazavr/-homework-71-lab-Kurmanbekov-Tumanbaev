@@ -4,9 +4,15 @@
     border: 3px solid black;
     color: white;
 }
-.Orders h3 {
-    margin: 0;
-}
-.Order {
+
+.Orders button {
+    background-color: white;
+    color: black;
+    outline: none;
+    border: 2px solid black;
+    cursor: pointer;
+    padding: 5px 40px;
+    border-radius: 5px;
+    font-weight: bold;
 
 }
