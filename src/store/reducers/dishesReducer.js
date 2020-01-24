@@ -1,7 +1,7 @@
 import {DISHES_FAILURE, DISHES_REQUEST, DISHES_SUCCESS} from "../actions/actionsType";
 
 const initialState = {
-    dishes: {},
+    dishes: null,
     error: null,
     loading: false
 };
