@@ -7,7 +7,7 @@ const Dishes = props => {
         <div className='Dish'>
             <div className='Dishes-Info flex'>
                 <div>
-                    {props.dishes === '' ? <p>no img</p>: <img src={props.img} alt=""/>}
+                    {props.dishes === '' ? <p style={{textTransform: 'uppercase'}}>no image</p>: <img src={props.img} alt=""/>}
                 </div>
                 <p>{props.dishName}</p>
                 <p><b>{props.cost}KGS</b></p>
